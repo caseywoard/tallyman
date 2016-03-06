@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HandlesMOC.h"
 
-@interface tmTableViewController : UITableViewController
+@interface tmTableViewController : UITableViewController <HandlesMOC>
+
+- (void)receiveMOC:(NSManagedObjectContext *)incomingMOC;
 
 @end

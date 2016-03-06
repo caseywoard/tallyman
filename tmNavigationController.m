@@ -10,4 +10,8 @@
 
 @implementation tmNavigationController
 
+- (void)receiveMOC:(NSManagedObjectContext *)incomingMOC {
+    NSLog(@"receiveMOC was called in tmNavigationController");
+}
+
 @end

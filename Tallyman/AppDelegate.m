@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HandlesMOC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // pass managed object context immediately to root navigation controller at launch
+    id<HandlesMOC> child = (id<HandlesMOC>)self.window.rootViewController;
+    [child receiveMOC:self.managedObjectContext];
+    
+    //delays presentation of launchscreen
+    {
+        [NSThread sleepForTimeInterval:3.0];
+    }
+    
+    
     return YES;
 }
 

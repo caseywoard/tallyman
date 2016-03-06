@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		6E260D701C8CC8E700DF4F88 /* tmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmTableViewCell.h; sourceTree = "<group>"; };
 		6E260D711C8CC8E700DF4F88 /* tmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tmTableViewCell.m; sourceTree = "<group>"; };
+		6E260D751C8CD25300DF4F88 /* HandlesMOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandlesMOC.h; path = ../HandlesMOC.h; sourceTree = "<group>"; };
 		6ECC6D1A1C8BC9CF00CF13A4 /* Tallyman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tallyman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ECC6D1E1C8BC9CF00CF13A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6ECC6D201C8BC9CF00CF13A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 				6ECC6D441C8BD79000CF13A4 /* tmCounterEditViewController.m */,
 				6ECC6D461C8BD7B200CF13A4 /* tmCounterDetailViewController.h */,
 				6ECC6D471C8BD7B200CF13A4 /* tmCounterDetailViewController.m */,
+				6E260D751C8CD25300DF4F88 /* HandlesMOC.h */,
 				6ECC6D261C8BC9CF00CF13A4 /* Main.storyboard */,
 				6ECC6D2C1C8BC9CF00CF13A4 /* Assets.xcassets */,
 				6ECC6D2E1C8BC9CF00CF13A4 /* LaunchScreen.storyboard */,

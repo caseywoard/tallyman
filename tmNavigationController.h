@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HandlesMOC.h"
 
-@interface tmNavigationController : UINavigationController
+@interface tmNavigationController : UINavigationController <HandlesMOC>
 
+- (void)receiveMOC:(NSManagedObjectContext *)incomingMOC;
 @end
