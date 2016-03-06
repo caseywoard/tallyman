@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E260D721C8CC8E700DF4F88 /* tmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E260D711C8CC8E700DF4F88 /* tmTableViewCell.m */; };
 		6ECC6D1F1C8BC9CF00CF13A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC6D1E1C8BC9CF00CF13A4 /* main.m */; };
 		6ECC6D221C8BC9CF00CF13A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC6D211C8BC9CF00CF13A4 /* AppDelegate.m */; };
 		6ECC6D281C8BC9CF00CF13A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECC6D261C8BC9CF00CF13A4 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E260D701C8CC8E700DF4F88 /* tmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmTableViewCell.h; sourceTree = "<group>"; };
+		6E260D711C8CC8E700DF4F88 /* tmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tmTableViewCell.m; sourceTree = "<group>"; };
 		6ECC6D1A1C8BC9CF00CF13A4 /* Tallyman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tallyman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ECC6D1E1C8BC9CF00CF13A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6ECC6D201C8BC9CF00CF13A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				6ECC6D3E1C8BD6F200CF13A4 /* tmNavigationController.m */,
 				6ECC6D401C8BD73E00CF13A4 /* tmTableViewController.h */,
 				6ECC6D411C8BD73E00CF13A4 /* tmTableViewController.m */,
+				6E260D701C8CC8E700DF4F88 /* tmTableViewCell.h */,
+				6E260D711C8CC8E700DF4F88 /* tmTableViewCell.m */,
 				6ECC6D431C8BD79000CF13A4 /* tmCounterEditViewController.h */,
 				6ECC6D441C8BD79000CF13A4 /* tmCounterEditViewController.m */,
 				6ECC6D461C8BD7B200CF13A4 /* tmCounterDetailViewController.h */,
@@ -185,6 +190,7 @@
 				6ECC6D481C8BD7B200CF13A4 /* tmCounterDetailViewController.m in Sources */,
 				6ECC6D2B1C8BC9CF00CF13A4 /* Tallyman.xcdatamodeld in Sources */,
 				6ECC6D451C8BD79000CF13A4 /* tmCounterEditViewController.m in Sources */,
+				6E260D721C8CC8E700DF4F88 /* tmTableViewCell.m in Sources */,
 				6ECC6D3B1C8BD5D500CF13A4 /* TallyCounter+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +340,7 @@
 				6ECC6D361C8BC9CF00CF13A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
