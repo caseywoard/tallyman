@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15C50" minimumToolsVersion="Automatic">
+    <entity name="TallyCounter" representedClassName="TallyCounter" syncable="YES">
+        <attribute name="counterBackGroundImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="counterCurrentValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="counterDecreaseValueBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="counterIncreaseValueBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="counterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="counterResetValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="counterSetGoal" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="counterTrackDate" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TallyCounter" positionX="-63" positionY="-18" width="128" height="165"/>
+    </elements>
 </model>

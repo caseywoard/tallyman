@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  tmNavigationController.h
 //  Tallyman
 //
 //  Created by Casey Ward on 3/5/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface tmNavigationController : UINavigationController
 
 @end
-
