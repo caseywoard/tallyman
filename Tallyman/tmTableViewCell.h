@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TallyCounter.h"
 
 @interface tmTableViewCell : UITableViewCell
+
+- (void) setInternalFields:(TallyCounter *)incomingTallyCounter;
 
 @end

@@ -15,7 +15,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WKe-oO-KYc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="WKe-oO-KYc">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WKe-oO-KYc" id="JY7-HI-fOt">
@@ -30,7 +30,7 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="j1j-87-FfX" id="VxI-Y3-P7r"/>
+                            <outlet property="dataSource" destination="j1j-87-FfX" id="3KO-pZ-lKZ"/>
                             <outlet property="delegate" destination="j1j-87-FfX" id="EYB-Wr-9Ue"/>
                         </connections>
                     </tableView>

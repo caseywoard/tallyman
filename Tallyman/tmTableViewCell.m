@@ -8,6 +8,15 @@
 
 #import "tmTableViewCell.h"
 
+@interface tmTableViewCell ()
+
+
+@end
+
 @implementation tmTableViewCell
+
+- (void) setInternalFields:(TallyCounter *)incomingTallyCounter {
+    
+}
 
 @end

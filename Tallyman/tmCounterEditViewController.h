@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HandlesTallyCounterEntity.h"
+#import "HandlesMOC.h"
 
-@interface tmCounterEditViewController : UIViewController
+@interface tmCounterEditViewController : UIViewController <HandlesMOC, HandlesTallyCounterEntity>
 
 @end

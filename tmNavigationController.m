@@ -8,10 +8,18 @@
 
 #import "tmNavigationController.h"
 
+@interface tmNavigationController ()
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@end
+
 @implementation tmNavigationController
 
 - (void)receiveMOC:(NSManagedObjectContext *)incomingMOC {
-    NSLog(@"receiveMOC was called in tmNavigationController");
+    self.managedObjectContext = incomingMOC;
+    id<HandlesMOC> child = (id<HandlesMOC>)self.viewControllers[0];
+    [child receiveMOC:self.managedObjectContext];
 }
 
 @end
