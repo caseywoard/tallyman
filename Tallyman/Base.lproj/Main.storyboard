@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="1058" y="263"/>
         </scene>
-        <!--Tm Counter Edit View Controller-->
+        <!--Tm Counter EditVC-->
         <scene sceneID="rJi-UL-TXD">
             <objects>
-                <viewController id="fgh-fj-O7i" customClass="tmCounterEditViewController" sceneMemberID="viewController">
+                <viewController id="fgh-fj-O7i" customClass="tmCounterEditVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ecL-Dr-6PE"/>
                         <viewControllerLayoutGuide type="bottom" id="MeF-nD-Dc2"/>

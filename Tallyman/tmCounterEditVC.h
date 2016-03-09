@@ -12,4 +12,6 @@
 
 @interface tmCounterEditVC : UIViewController <HandlesTallyCounterEntity, HandlesMOC>
 
+- (void)receiveMOC:(NSManagedObjectContext *)incomingMOC;
+
 @end

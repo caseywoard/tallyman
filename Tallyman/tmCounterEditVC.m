@@ -14,6 +14,7 @@
 @property (nonatomic, strong) TallyCounter *localTC;
 
 
+
 @end
 
 @implementation tmCounterEditVC
@@ -37,6 +38,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 - (void)receiveMOC:(NSManagedObjectContext *)incomingMOC {
     self.managedObjectContext = incomingMOC;

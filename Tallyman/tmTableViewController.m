@@ -14,6 +14,7 @@
 @interface tmTableViewController () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchResultsController;
 
 @end
 
@@ -21,12 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setUpFetchResultController];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +33,22 @@
 
 #pragma mark - Table view data source
 
+- (void)setUpFetchResultController {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    fetchRequest.entity = [NSEntityDescription entityForName:@"TallyCounter" inManagedObjectContext:self.managedObjectContext];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"TRUEPREDICATE"];
+    fetchRequest.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"counterName" ascending:YES]];
+    
+    self.fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    self.fetchResultsController.delegate = self;
+    
+    NSError *err;
+    BOOL fetchSucceeded = [self.fetchResultsController performFetch:&err];
+    if (!fetchSucceeded) {
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Couldn't fetch" userInfo:nil];
+    }
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     return 1;
@@ -43,13 +56,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return [self.fetchResultsController.sections[section] numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    TallyCounter *tallyCounter = self.fetchResultsController.sections[indexPath.section].objects[indexPath.row];
+    tmTableViewCell *cell = (tmTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    [cell setInternalFields:tallyCounter];
     
     return cell;
 }
