@@ -10,7 +10,9 @@
 #import "TallyCounter.h"
 
 @interface tmTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *tableCellCounterName;
+@property (weak, nonatomic) IBOutlet UILabel *tableCellCounterValue;
+@property (strong, nonatomic) TallyCounter *localTallyCounter;
 - (void) setInternalFields:(TallyCounter *)incomingTallyCounter;
 
 @end

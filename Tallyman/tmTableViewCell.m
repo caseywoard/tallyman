@@ -16,6 +16,9 @@
 @implementation tmTableViewCell
 
 - (void) setInternalFields:(TallyCounter *)incomingTallyCounter {
+    self.localTallyCounter = incomingTallyCounter;
+    self.tableCellCounterName.text = incomingTallyCounter.counterName;
+    self.tableCellCounterValue.text = [NSString stringWithFormat:@"%@",incomingTallyCounter.counterCurrentValue];
     
 }
 
