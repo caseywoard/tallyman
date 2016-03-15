@@ -74,6 +74,7 @@
     [child receiveMOC:self.managedObjectContext];
     TallyCounter *counter;
     counter = [NSEntityDescription insertNewObjectForEntityForName:@"TallyCounter" inManagedObjectContext:self.managedObjectContext];
+    NSLog(@"bar button tapped");
 }
 
 - (void)receiveMOC:(NSManagedObjectContext *)incomingMOC {
