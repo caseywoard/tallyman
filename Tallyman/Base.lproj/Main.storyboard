@@ -95,25 +95,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIa-Qm-Hpa" id="36E-rd-bMb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="evI-PB-ptE">
-                                                    <rect key="frame" x="224" y="4" width="162" height="62"/>
-                                                    <animations/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
-                                                </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRY-hz-iAM">
-                                                    <rect key="frame" x="533" y="20" width="59" height="30"/>
-                                                    <animations/>
-                                                    <state key="normal" title="Increase"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdw-CC-Wgp">
-                                                    <rect key="frame" x="8" y="20" width="65" height="30"/>
-                                                    <animations/>
-                                                    <state key="normal" title="Decrease"/>
-                                                </button>
-                                            </subviews>
                                             <animations/>
                                             <color key="backgroundColor" red="0.8818413329" green="0.8818413329" blue="0.8818413329" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -196,7 +177,18 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="cQu-Cr-Kcy"/>
+                    <navigationItem key="navigationItem" id="cQu-Cr-Kcy">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="qaU-kj-aHe">
+                            <connections>
+                                <action selector="cancelBtnTapped:" destination="PT1-8b-z7i" id="cVn-4j-C7D"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Jns-vV-43j">
+                            <connections>
+                                <action selector="saveBtnTapped:" destination="PT1-8b-z7i" id="sdm-2P-bdm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z04-4f-0vY" userLabel="First Responder" sceneMemberID="firstResponder"/>

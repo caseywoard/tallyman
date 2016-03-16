@@ -107,4 +107,12 @@
 }
 */
 
+- (IBAction)saveBtnTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cancelBtnTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
