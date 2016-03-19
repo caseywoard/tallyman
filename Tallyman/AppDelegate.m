@@ -22,9 +22,9 @@
     [child receiveMOC:self.managedObjectContext];
     
     //delays presentation of launchscreen
-    {
-        [NSThread sleepForTimeInterval:3.0];
-    }
+//    {
+//        [NSThread sleepForTimeInterval:3.0];
+//    }
     
     
     return YES;

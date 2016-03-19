@@ -11,6 +11,7 @@
 		6E260D7C1C8E965300DF4F88 /* tmCounterEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E260D7B1C8E965300DF4F88 /* tmCounterEditVC.m */; };
 		6E260D7F1C9636F500DF4F88 /* TMTableVC-EditTallyCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E260D7E1C9636F500DF4F88 /* TMTableVC-EditTallyCounter.m */; };
 		6E260D821C97B07800DF4F88 /* TMSecondNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E260D811C97B07800DF4F88 /* TMSecondNavigationController.m */; };
+		6E69C51F1C9A6616004AB3FD /* TMTableViewCell-EditTallyCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E69C51E1C9A6616004AB3FD /* TMTableViewCell-EditTallyCounter.m */; };
 		6ECC6D1F1C8BC9CF00CF13A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC6D1E1C8BC9CF00CF13A4 /* main.m */; };
 		6ECC6D221C8BC9CF00CF13A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC6D211C8BC9CF00CF13A4 /* AppDelegate.m */; };
 		6ECC6D281C8BC9CF00CF13A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECC6D261C8BC9CF00CF13A4 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 		6E260D7E1C9636F500DF4F88 /* TMTableVC-EditTallyCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMTableVC-EditTallyCounter.m"; sourceTree = "<group>"; };
 		6E260D801C97B07800DF4F88 /* TMSecondNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSecondNavigationController.h; sourceTree = "<group>"; };
 		6E260D811C97B07800DF4F88 /* TMSecondNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSecondNavigationController.m; sourceTree = "<group>"; };
+		6E69C51D1C9A6616004AB3FD /* TMTableViewCell-EditTallyCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMTableViewCell-EditTallyCounter.h"; sourceTree = "<group>"; };
+		6E69C51E1C9A6616004AB3FD /* TMTableViewCell-EditTallyCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMTableViewCell-EditTallyCounter.m"; sourceTree = "<group>"; };
 		6ECC6D1A1C8BC9CF00CF13A4 /* Tallyman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tallyman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ECC6D1E1C8BC9CF00CF13A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6ECC6D201C8BC9CF00CF13A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				6E260D811C97B07800DF4F88 /* TMSecondNavigationController.m */,
 				6E260D7D1C9636F500DF4F88 /* TMTableVC-EditTallyCounter.h */,
 				6E260D7E1C9636F500DF4F88 /* TMTableVC-EditTallyCounter.m */,
+				6E69C51D1C9A6616004AB3FD /* TMTableViewCell-EditTallyCounter.h */,
+				6E69C51E1C9A6616004AB3FD /* TMTableViewCell-EditTallyCounter.m */,
 				6E260D7A1C8E965300DF4F88 /* tmCounterEditVC.h */,
 				6E260D7B1C8E965300DF4F88 /* tmCounterEditVC.m */,
 				6ECC6D461C8BD7B200CF13A4 /* tmCounterDetailViewController.h */,
@@ -203,6 +208,7 @@
 				6E260D7C1C8E965300DF4F88 /* tmCounterEditVC.m in Sources */,
 				6ECC6D3C1C8BD5D500CF13A4 /* TallyCounter.m in Sources */,
 				6E260D821C97B07800DF4F88 /* TMSecondNavigationController.m in Sources */,
+				6E69C51F1C9A6616004AB3FD /* TMTableViewCell-EditTallyCounter.m in Sources */,
 				6ECC6D481C8BD7B200CF13A4 /* tmCounterDetailViewController.m in Sources */,
 				6ECC6D2B1C8BC9CF00CF13A4 /* Tallyman.xcdatamodeld in Sources */,
 				6E260D721C8CC8E700DF4F88 /* tmTableViewCell.m in Sources */,
