@@ -31,7 +31,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-AJ-Zn5">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-AJ-Zn5">
                                             <rect key="frame" x="449" y="8" width="143" height="28"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -56,7 +56,7 @@
                                 <connections>
                                     <outlet property="tableCellCounterName" destination="GWO-ls-Eyn" id="tHX-Un-85s"/>
                                     <outlet property="tableCellCounterValue" destination="UUu-AJ-Zn5" id="UyU-4F-iaK"/>
-                                    <segue destination="q1o-rL-BPQ" kind="show" id="oxl-Ja-bph"/>
+                                    <segue destination="CYq-P0-ugQ" kind="show" id="oxl-Ja-bph"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -130,16 +130,22 @@
                                                     <rect key="frame" x="8" y="14" width="32" height="32"/>
                                                     <animations/>
                                                     <state key="normal" image="minus-sign-32-3pxstroke"/>
+                                                    <connections>
+                                                        <action selector="decreaseCurrentValueTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="8a0-xj-Ylf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idm-pf-MvS">
                                                     <rect key="frame" x="560" y="14" width="32" height="32"/>
                                                     <animations/>
                                                     <state key="normal" image="plus-sign-32-3pxstroke"/>
+                                                    <connections>
+                                                        <action selector="increaseCurrentValueTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="rsx-IO-pPa"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARN-be-xlu">
                                                     <rect key="frame" x="48" y="14" width="504" height="30"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -172,16 +178,22 @@
                                                     <rect key="frame" x="8" y="14" width="32" height="32"/>
                                                     <animations/>
                                                     <state key="normal" image="minus-sign-32-3pxstroke"/>
+                                                    <connections>
+                                                        <action selector="increaseValueDownTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="bk6-GB-4qj"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bk-n2-9AO">
                                                     <rect key="frame" x="560" y="14" width="32" height="32"/>
                                                     <animations/>
                                                     <state key="normal" image="plus-sign-32-3pxstroke"/>
+                                                    <connections>
+                                                        <action selector="increaseValueUpTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="gyu-hY-XkP"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vw0-xS-Su7">
                                                     <rect key="frame" x="48" y="14" width="504" height="30"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -214,17 +226,23 @@
                                                     <rect key="frame" x="8" y="14" width="32" height="32"/>
                                                     <animations/>
                                                     <state key="normal" image="minus-sign-32-3pxstroke"/>
+                                                    <connections>
+                                                        <action selector="decreaseValueDownTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="haW-ij-u5g"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xMU-tP-roR">
                                                     <rect key="frame" x="48" y="14" width="504" height="30"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4b-Ej-h6x">
                                                     <rect key="frame" x="560" y="13" width="32" height="32"/>
                                                     <animations/>
                                                     <state key="normal" image="plus-sign-32-3pxstroke"/>
+                                                    <connections>
+                                                        <action selector="decreaseValueUpTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="vEt-Ex-H6T"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
@@ -316,6 +334,10 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="counterNameLabel" destination="aVh-UW-xMM" id="S7O-yg-ulJ"/>
+                        <outlet property="currentValueLabel" destination="ARN-be-xlu" id="DC0-zm-yHl"/>
+                        <outlet property="decreaseValueLabel" destination="xMU-tP-roR" id="KmO-0s-zsv"/>
+                        <outlet property="increaseValueLabel" destination="Vw0-xS-Su7" id="Qd9-Hd-Uff"/>
                         <outlet property="tableView" destination="lca-K5-W7n" id="Z5m-OX-pUq"/>
                     </connections>
                 </tableViewController>
@@ -334,13 +356,35 @@
                     <view key="view" contentMode="scaleToFill" id="mAM-cv-mfg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkP-zW-5xm">
+                                <rect key="frame" x="20" y="72" width="560" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="SMz-9N-NFN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="80"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jkP-zW-5xm" firstAttribute="leading" secondItem="mAM-cv-mfg" secondAttribute="leadingMargin" id="4dO-9f-J13"/>
+                            <constraint firstItem="jkP-zW-5xm" firstAttribute="centerX" secondItem="mAM-cv-mfg" secondAttribute="centerX" id="H7W-UT-RPm"/>
+                            <constraint firstItem="jkP-zW-5xm" firstAttribute="top" secondItem="xzE-DU-E31" secondAttribute="bottom" constant="8" symbolic="YES" id="XIk-7K-KQh"/>
+                            <constraint firstItem="jkP-zW-5xm" firstAttribute="trailing" secondItem="mAM-cv-mfg" secondAttribute="trailingMargin" id="ql9-FY-omE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JGJ-M8-WG3"/>
+                    <connections>
+                        <outlet property="currentTallyValueLabel" destination="jkP-zW-5xm" id="1Uz-Xc-W6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0H-9t-MVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="707"/>
+            <point key="canvasLocation" x="2488" y="707"/>
         </scene>
         <!--Tm Navigation Controller-->
         <scene sceneID="ePO-od-2I3">
@@ -379,6 +423,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxH-r3-nC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1738" y="30"/>
+        </scene>
+        <!--Second Navigation Controller-->
+        <scene sceneID="B01-ZG-bDW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CYq-P0-ugQ" customClass="TMSecondNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZr-8H-15f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q1o-rL-BPQ" kind="relationship" relationship="rootViewController" id="Vu5-oZ-Z0T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBF-3s-r24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="707"/>
         </scene>
     </scenes>
     <resources>

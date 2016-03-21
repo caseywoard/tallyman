@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HandlesTallyCounterEntity.h"
+#import "HandlesMOC.h"
 
-@interface tmCounterDetailViewController : UIViewController
+@interface tmCounterDetailViewController : UIViewController <HandlesMOC, HandlesTallyCounterEntity>
+
+- (void)receiveMOC:(NSManagedObjectContext *)incomingMOC;
+- (void)receiveTallyCounterEntity:(TallyCounter *)tcEntity;
 
 @end

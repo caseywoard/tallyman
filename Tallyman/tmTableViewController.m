@@ -69,12 +69,54 @@
     return cell;
 }
 
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [[self tableView] insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [[self tableView] deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        case NSFetchedResultsChangeUpdate: {
+            if ([controller.fetchedObjects count] != 0) {
+                tmTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+                TallyCounter *counter = [controller objectAtIndexPath:indexPath];
+                [cell setInternalFields:counter];
+            }
+            
+            break;
+        }
+        case NSFetchedResultsChangeMove:
+            [[self tableView] deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [[self tableView] insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView endUpdates];
+}
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     id<HandlesMOC, HandlesTallyCounterEntity> child = (id<HandlesMOC, HandlesTallyCounterEntity>)[segue destinationViewController];
     [child receiveMOC:self.managedObjectContext];
     TallyCounter *counter;
-    counter = [NSEntityDescription insertNewObjectForEntityForName:@"TallyCounter" inManagedObjectContext:self.managedObjectContext];
-    NSLog(@"bar button tapped");
+     if ([sender isMemberOfClass:[UIBarButtonItem class]]) {
+        //counter = [NSEntityDescription insertNewObjectForEntityForName:@"TallyCounter" inManagedObjectContext:self.managedObjectContext];
+        NSLog(@"bar button tapped");
+     } else {
+         tmTableViewCell *source = (tmTableViewCell *)sender;
+         counter = source.localTallyCounter;
+         [child receiveTallyCounterEntity:counter];
+         NSLog(@"cell tapped");
+     }
+    
 }
 
 - (void)receiveMOC:(NSManagedObjectContext *)incomingMOC {

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HandlesMOC.h"
+#import "HandlesTallyCounterEntity.h"
 
-@interface TMSecondNavigationController : UINavigationController <HandlesMOC>
+@interface TMSecondNavigationController : UINavigationController <HandlesMOC, HandlesTallyCounterEntity>
 
 - (void)receiveMOC:(NSManagedObjectContext *)incomingMOC;
+- (void)receiveTallyCounterEntity:(TallyCounter *)tcEntity;
 
 @end

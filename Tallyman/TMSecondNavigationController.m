@@ -11,6 +11,7 @@
 @interface TMSecondNavigationController ()
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) TallyCounter *localTC;
 
 @end
 
@@ -30,6 +31,13 @@
     self.managedObjectContext = incomingMOC;
     id<HandlesMOC> child = (id<HandlesMOC>)self.viewControllers[0];
     [child receiveMOC:self.managedObjectContext];
+}
+
+- (void)receiveTallyCounterEntity:(TallyCounter *)tcEntity {
+    self.localTC = tcEntity;
+    id<HandlesTallyCounterEntity> child = (id<HandlesTallyCounterEntity>)self.viewControllers[0];
+    [child receiveTallyCounterEntity:self.localTC];
+    
 }
 
 /*
