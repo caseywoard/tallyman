@@ -10,6 +10,8 @@
 #import "HandlesTallyCounterEntity.h"
 #import "TallyCounter.h"
 #import "tmTableViewCell.h"
+#import "tmCounterDetailViewController.h"
+
 
 @interface tmTableViewController () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 
@@ -111,11 +113,16 @@
         //counter = [NSEntityDescription insertNewObjectForEntityForName:@"TallyCounter" inManagedObjectContext:self.managedObjectContext];
         NSLog(@"bar button tapped");
      } else {
-         tmTableViewCell *source = (tmTableViewCell *)sender;
-         counter = source.localTallyCounter;
+         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+         tmTableViewCell *cell  = (tmTableViewCell *)[self.tableView cellForRowAtIndexPath:path];
+         //tmTableViewCell *source = (tmTableViewCell *)sender;
+         counter = cell.localTallyCounter;
+         NSLog(@"this cell's tally counter name is: %@", counter.counterName);
          [child receiveTallyCounterEntity:counter];
-         NSLog(@"cell tapped");
+         
+         
      }
+    
     
 }
 
@@ -123,5 +130,10 @@
     self.managedObjectContext = incomingMOC;
    
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [self performSegueWithIdentifier:@"segueToTallyCounterVC" sender:indexPath];
+//    NSLog(@"didSelectRowAtIndexPath yeah");
+//}
 
 @end

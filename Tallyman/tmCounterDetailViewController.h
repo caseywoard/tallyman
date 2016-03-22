@@ -12,6 +12,7 @@
 
 @interface tmCounterDetailViewController : UIViewController <HandlesMOC, HandlesTallyCounterEntity>
 
+
 - (void)receiveMOC:(NSManagedObjectContext *)incomingMOC;
 - (void)receiveTallyCounterEntity:(TallyCounter *)tcEntity;
 
