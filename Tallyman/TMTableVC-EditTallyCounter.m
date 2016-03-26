@@ -46,6 +46,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //add gesture recognizer to view to hidekeyboard
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.tableView addGestureRecognizer:gestureRecognizer];
     
     
      //self.tableView.sectionHeaderHeight = [self.tableView
@@ -60,6 +63,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
@@ -78,6 +82,11 @@
     self.localTC = tcEntity;
     
 }
+
+- (void)hideKeyboard {
+    [self.view endEditing:YES];
+}
+
 
 #pragma mark - UI element functions
 //current value button actions
