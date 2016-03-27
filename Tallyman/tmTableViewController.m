@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchResultsController;
 
+
 @end
 
 @implementation tmTableViewController
@@ -71,6 +72,10 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView beginUpdates];
 }
@@ -88,6 +93,7 @@
                 tmTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
                 TallyCounter *counter = [controller objectAtIndexPath:indexPath];
                 [cell setInternalFields:counter];
+                [self saveTallyCounter:counter];
             }
             
             break;
@@ -102,6 +108,20 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView endUpdates];
+}
+
+- (void)saveTallyCounter:(TallyCounter *)aCounter {
+    //save local Tally Counter entity object to moc
+    NSError *err;
+    BOOL saveSuccess = [self.managedObjectContext save:&err];
+    if (!saveSuccess) {
+        @throw [NSException exceptionWithName:NSGenericException reason:@"Couldn't save." userInfo:@{NSUnderlyingErrorKey:err}];
+    }
+    NSLog(@"entity saved");
+}
+
+- (IBAction)increaseValueTapped:(id)sender {
+    
 }
 
 

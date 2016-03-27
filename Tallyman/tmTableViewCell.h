@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *tableCellCounterName;
 @property (weak, nonatomic) IBOutlet UILabel *tableCellCounterValue;
 @property (strong, nonatomic) TallyCounter *localTallyCounter;
+@property (weak, nonatomic) IBOutlet UIButton *decreaseTallyButton;
+@property (weak, nonatomic) IBOutlet UIButton *increaseTallyButton;
+
 
 
 @end

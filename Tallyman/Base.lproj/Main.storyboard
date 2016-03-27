@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Tallyman-->
@@ -24,36 +23,59 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-ls-Eyn">
-                                            <rect key="frame" x="8" y="8" width="433" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-AJ-Zn5">
+                                            <rect key="frame" x="279" y="8" width="42" height="20.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-AJ-Zn5">
-                                            <rect key="frame" x="449" y="8" width="143" height="28"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qip-ub-00M">
+                                            <rect key="frame" x="8" y="6" width="32" height="32"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="1Sj-vh-BId"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="minus-sign-32-3pxstroke"/>
+                                            <connections>
+                                                <action selector="decreaseTallyButtonTapped:" destination="WKe-oO-KYc" eventType="touchUpInside" id="SPr-FO-0kc"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-Mf-BfA">
+                                            <rect key="frame" x="560" y="6" width="32" height="32"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="2FG-aI-v33"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="plus-sign-32-3pxstroke"/>
+                                            <connections>
+                                                <action selector="increaseValueTapped:" destination="j1j-87-FfX" eventType="touchUpInside" id="86i-kS-5W6"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-ls-Eyn">
+                                            <rect key="frame" x="283" y="21" width="33" height="14.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="UUu-AJ-Zn5" firstAttribute="centerY" secondItem="JY7-HI-fOt" secondAttribute="centerY" id="CjX-tX-AL9"/>
-                                        <constraint firstItem="GWO-ls-Eyn" firstAttribute="centerY" secondItem="JY7-HI-fOt" secondAttribute="centerY" id="DsI-vR-XO0"/>
-                                        <constraint firstItem="UUu-AJ-Zn5" firstAttribute="baseline" secondItem="GWO-ls-Eyn" secondAttribute="baseline" id="VLx-LJ-1f8"/>
-                                        <constraint firstItem="GWO-ls-Eyn" firstAttribute="bottom" secondItem="JY7-HI-fOt" secondAttribute="bottomMargin" id="ZFz-Fh-fUh"/>
-                                        <constraint firstItem="GWO-ls-Eyn" firstAttribute="leading" secondItem="JY7-HI-fOt" secondAttribute="leadingMargin" id="cKg-HQ-m0j"/>
-                                        <constraint firstItem="UUu-AJ-Zn5" firstAttribute="width" secondItem="GWO-ls-Eyn" secondAttribute="width" multiplier="0.33" id="kFl-GN-X0z"/>
-                                        <constraint firstItem="UUu-AJ-Zn5" firstAttribute="trailing" secondItem="JY7-HI-fOt" secondAttribute="trailingMargin" id="peN-a4-zsR"/>
-                                        <constraint firstItem="GWO-ls-Eyn" firstAttribute="top" secondItem="JY7-HI-fOt" secondAttribute="topMargin" id="tJk-x4-JOv"/>
-                                        <constraint firstItem="UUu-AJ-Zn5" firstAttribute="leading" secondItem="GWO-ls-Eyn" secondAttribute="trailing" constant="8" symbolic="YES" id="yZi-gZ-ZHd"/>
+                                        <constraint firstItem="UUu-AJ-Zn5" firstAttribute="centerX" secondItem="JY7-HI-fOt" secondAttribute="centerX" id="D1h-In-ae4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xBs-Mf-BfA" secondAttribute="trailing" id="Kz8-Q6-HGH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="GWO-ls-Eyn" secondAttribute="bottom" id="LLC-O8-zXL"/>
+                                        <constraint firstItem="UUu-AJ-Zn5" firstAttribute="top" secondItem="JY7-HI-fOt" secondAttribute="topMargin" id="Mg4-cn-m5P"/>
+                                        <constraint firstItem="xBs-Mf-BfA" firstAttribute="centerY" secondItem="JY7-HI-fOt" secondAttribute="centerY" id="XZS-0U-YWe"/>
+                                        <constraint firstItem="Qip-ub-00M" firstAttribute="leading" secondItem="JY7-HI-fOt" secondAttribute="leadingMargin" id="Xhe-r4-KYf"/>
+                                        <constraint firstItem="Qip-ub-00M" firstAttribute="centerY" secondItem="JY7-HI-fOt" secondAttribute="centerY" id="pul-Pm-gB4"/>
+                                        <constraint firstItem="GWO-ls-Eyn" firstAttribute="centerX" secondItem="JY7-HI-fOt" secondAttribute="centerX" id="xot-Q2-hUI"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="decreaseTallyButton" destination="Qip-ub-00M" id="U7q-mJ-PVi"/>
+                                    <outlet property="increaseTallyButton" destination="xBs-Mf-BfA" id="3nD-cJ-wKG"/>
                                     <outlet property="tableCellCounterName" destination="GWO-ls-Eyn" id="tHX-Un-85s"/>
                                     <outlet property="tableCellCounterValue" destination="UUu-AJ-Zn5" id="UyU-4F-iaK"/>
                                     <segue destination="k3C-SB-1xW" kind="show" id="WwT-yW-HQ3"/>
