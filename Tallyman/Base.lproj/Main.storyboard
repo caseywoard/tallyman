@@ -380,23 +380,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeE-rh-v3l">
-                                <rect key="frame" x="250" y="72" width="100" height="100"/>
+                                <rect key="frame" x="20" y="164" width="560" height="100"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6Yb-oq-xxU"/>
                                     <constraint firstAttribute="height" constant="100" id="n59-1L-d6W"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Yb-oq-xxU"/>
+                                    </mask>
+                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wit-pC-9ct">
+                                <rect key="frame" x="20" y="384" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="Minus-TallyCounterView"/>
+                                <connections>
+                                    <action selector="decreaseTallyTapped:" destination="k3C-SB-1xW" eventType="touchUpInside" id="pmd-1a-Uav"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcZ-EB-cU3">
+                                <rect key="frame" x="516" y="384" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="Plus-TallyCounterView"/>
+                                <connections>
+                                    <action selector="increaseTallyTapped:" destination="k3C-SB-1xW" eventType="touchUpInside" id="dSN-gb-LZ6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aeE-rh-v3l" firstAttribute="top" secondItem="I0d-z9-Syi" secondAttribute="bottom" constant="8" symbolic="YES" id="eoN-bO-6KU"/>
+                            <constraint firstItem="aeE-rh-v3l" firstAttribute="trailing" secondItem="zGq-6R-I3e" secondAttribute="trailingMargin" id="0h3-OV-IMg"/>
+                            <constraint firstItem="QcZ-EB-cU3" firstAttribute="centerY" secondItem="Wit-pC-9ct" secondAttribute="centerY" id="Der-U6-RxN"/>
+                            <constraint firstItem="QcZ-EB-cU3" firstAttribute="trailing" secondItem="zGq-6R-I3e" secondAttribute="trailingMargin" id="MBt-1w-Tuu"/>
+                            <constraint firstItem="Wit-pC-9ct" firstAttribute="top" secondItem="aeE-rh-v3l" secondAttribute="bottom" constant="120" id="UKc-te-vX1"/>
+                            <constraint firstItem="QcZ-EB-cU3" firstAttribute="top" secondItem="aeE-rh-v3l" secondAttribute="bottom" constant="120" id="XsB-4i-IqZ"/>
+                            <constraint firstItem="aeE-rh-v3l" firstAttribute="leading" secondItem="zGq-6R-I3e" secondAttribute="leadingMargin" id="m5J-L9-Jhu"/>
                             <constraint firstItem="aeE-rh-v3l" firstAttribute="centerX" secondItem="zGq-6R-I3e" secondAttribute="centerX" id="mnp-PP-swJ"/>
+                            <constraint firstItem="Wit-pC-9ct" firstAttribute="leading" secondItem="zGq-6R-I3e" secondAttribute="leadingMargin" id="n7U-u6-QMK"/>
+                            <constraint firstItem="aeE-rh-v3l" firstAttribute="top" secondItem="I0d-z9-Syi" secondAttribute="bottom" constant="100" id="u2G-gh-pGA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mnp-PP-swJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="labelLabel" destination="aeE-rh-v3l" id="7nw-pl-gJM"/>
@@ -446,6 +479,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Minus-TallyCounterView" width="64" height="64"/>
+        <image name="Plus-TallyCounterView" width="64" height="64"/>
         <image name="minus-sign-32-3pxstroke" width="32" height="32"/>
         <image name="plus-sign-32-3pxstroke" width="32" height="32"/>
     </resources>

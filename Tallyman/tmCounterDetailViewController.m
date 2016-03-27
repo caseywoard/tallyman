@@ -39,5 +39,31 @@
     self.localTC = tcEntity;
 //    self.currentTallyValueLabel.text = [NSString stringWithFormat:@"%@",self.localTC.counterCurrentValue];
 }
+- (IBAction)decreaseTallyTapped:(id)sender {
+    NSInteger decreaseValueByInteger = [self.localTC.counterDecreaseValueBy intValue];
+    NSInteger newValue = [self.localTC.counterCurrentValue intValue] - decreaseValueByInteger;
+    self.localTC.counterCurrentValue = [NSNumber numberWithInt:(int)newValue];
+    //self.tableCellCounterValue.text = [NSString stringWithFormat:@"%ld",(long)newValue];
+    self.labelLabel.text = [NSString stringWithFormat:@"%@", self.localTC.counterCurrentValue];
+    [self saveTallyCounter:self.localTC];
+}
+- (IBAction)increaseTallyTapped:(id)sender {
+    NSInteger increaseValueByInteger = [self.localTC.counterIncreaseValueBy intValue];
+    NSInteger newValue = [self.localTC.counterCurrentValue intValue] + increaseValueByInteger;
+    self.localTC.counterCurrentValue = [NSNumber numberWithInt:(int)newValue];
+    //self.tableCellCounterValue.text = [NSString stringWithFormat:@"%ld",(long)newValue];
+    self.labelLabel.text = [NSString stringWithFormat:@"%@", self.localTC.counterCurrentValue];
+    [self saveTallyCounter:self.localTC];
+}
+
+- (void)saveTallyCounter:(TallyCounter *)aCounter {
+    //save local Tally Counter entity object to moc
+    NSError *err;
+    BOOL saveSuccess = [self.managedObjectContext save:&err];
+    if (!saveSuccess) {
+        @throw [NSException exceptionWithName:NSGenericException reason:@"Couldn't save." userInfo:@{NSUnderlyingErrorKey:err}];
+    }
+    NSLog(@"entity saved");
+}
 
 @end

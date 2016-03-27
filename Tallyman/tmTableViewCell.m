@@ -55,24 +55,6 @@
 }
 
 
-/*
- - (void)saveTallyCounter:(TallyCounter *)aCounter {
- //set input values to local Tally Counter entity
- self.localTC.counterName = self.counterNameLabel.text;
- self.localTC.counterCurrentValue = [NSNumber numberWithInteger:[self.currentValueLabel.text integerValue]];
- self.localTC.counterIncreaseValueBy = [NSNumber numberWithInteger:[self.increaseValueLabel.text integerValue]];
- self.localTC.counterDecreaseValueBy = [NSNumber numberWithInteger:[self.decreaseValueLabel.text integerValue]];
- //self.localTC.counterResetValue = [NSNumber numberWithInteger:self.resetValueLabel.text integerValue]];
- 
- //save local Tally Counter entity object to moc
- NSError *err;
- BOOL saveSuccess = [self.managedObjectContext save:&err];
- if (!saveSuccess) {
- @throw [NSException exceptionWithName:NSGenericException reason:@"Couldn't save." userInfo:@{NSUnderlyingErrorKey:err}];
- }
- NSLog(@"entity saved");
- }
- */
 
 
 
