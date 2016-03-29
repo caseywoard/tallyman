@@ -16,44 +16,46 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="WKe-oO-KYc" customClass="tmTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="WKe-oO-KYc" customClass="tmTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WKe-oO-KYc" id="JY7-HI-fOt">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-AJ-Zn5">
-                                            <rect key="frame" x="279" y="8" width="42" height="20.5"/>
+                                            <rect key="frame" x="275" y="8" width="49.5" height="24"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qip-ub-00M">
-                                            <rect key="frame" x="8" y="6" width="32" height="32"/>
+                                            <rect key="frame" x="8" y="14" width="32" height="32"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="32" id="1Sj-vh-BId"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="minus-sign-32-3pxstroke"/>
+                                            <state key="normal" title="Button" image="Minus-TallyListView"/>
+                                            <state key="highlighted" image="Minus-TallyListViewAlt"/>
                                             <connections>
                                                 <action selector="decreaseTallyButtonTapped:" destination="WKe-oO-KYc" eventType="touchUpInside" id="SPr-FO-0kc"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-Mf-BfA">
-                                            <rect key="frame" x="560" y="6" width="32" height="32"/>
+                                            <rect key="frame" x="560" y="14" width="32" height="32"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="32" id="2FG-aI-v33"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="plus-sign-32-3pxstroke"/>
+                                            <state key="normal" title="Button" image="Plus-TallyListView"/>
+                                            <state key="highlighted" image="Plus-TallyListViewAlt"/>
                                             <connections>
                                                 <action selector="increaseValueTapped:" destination="j1j-87-FfX" eventType="touchUpInside" id="86i-kS-5W6"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-ls-Eyn">
-                                            <rect key="frame" x="283" y="21" width="33" height="14.5"/>
+                                            <rect key="frame" x="283" y="37" width="33" height="14.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -399,6 +401,7 @@
                                 <rect key="frame" x="20" y="384" width="64" height="64"/>
                                 <animations/>
                                 <state key="normal" image="Minus-TallyCounterView"/>
+                                <state key="highlighted" image="Minus-TallCounterViewAlt"/>
                                 <connections>
                                     <action selector="decreaseTallyTapped:" destination="k3C-SB-1xW" eventType="touchUpInside" id="pmd-1a-Uav"/>
                                 </connections>
@@ -407,6 +410,7 @@
                                 <rect key="frame" x="516" y="384" width="64" height="64"/>
                                 <animations/>
                                 <state key="normal" image="Plus-TallyCounterView"/>
+                                <state key="highlighted" image="Plus-TallyCounterViewAlt"/>
                                 <connections>
                                     <action selector="increaseTallyTapped:" destination="k3C-SB-1xW" eventType="touchUpInside" id="dSN-gb-LZ6"/>
                                 </connections>
@@ -479,8 +483,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Minus-TallCounterViewAlt" width="64" height="64"/>
         <image name="Minus-TallyCounterView" width="64" height="64"/>
+        <image name="Minus-TallyListView" width="32" height="32"/>
+        <image name="Minus-TallyListViewAlt" width="32" height="32"/>
         <image name="Plus-TallyCounterView" width="64" height="64"/>
+        <image name="Plus-TallyCounterViewAlt" width="64" height="64"/>
+        <image name="Plus-TallyListView" width="32" height="32"/>
+        <image name="Plus-TallyListViewAlt" width="32" height="32"/>
         <image name="minus-sign-32-3pxstroke" width="32" height="32"/>
         <image name="plus-sign-32-3pxstroke" width="32" height="32"/>
     </resources>

@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "minus-sign-32-3pxstroke.png",
+      "filename" : "iconmonstr-minusBigAlt.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "iconmonstr-minusBigAlt@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "iconmonstr-minusBigAlt@3x.png",
       "scale" : "3x"
     }
   ],
