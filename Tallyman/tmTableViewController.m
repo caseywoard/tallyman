@@ -22,6 +22,11 @@
 @end
 
 @implementation tmTableViewController
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:NO animated:YES];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -155,5 +160,10 @@
 //    [self performSegueWithIdentifier:@"segueToTallyCounterVC" sender:indexPath];
 //    NSLog(@"didSelectRowAtIndexPath yeah");
 //}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:YES animated:YES];
+}
 
 @end

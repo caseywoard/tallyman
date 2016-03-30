@@ -89,6 +89,9 @@
                             <outlet property="delegate" destination="j1j-87-FfX" id="EYB-Wr-9Ue"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="fzz-i2-iPp"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="2o0-Dx-rXT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DoT-BY-YoZ">
                             <connections>
@@ -96,6 +99,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O43-mm-3hv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,7 +157,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irt-Qp-ovG">
                                                     <rect key="frame" x="8" y="14" width="32" height="32"/>
                                                     <animations/>
-                                                    <state key="normal" image="minus-sign-32-3pxstroke"/>
+                                                    <state key="normal" image="Minus-TallyListView"/>
+                                                    <state key="selected" image="Minus-TallCounterViewAlt"/>
+                                                    <state key="highlighted" image="Minus-TallyListViewAlt"/>
                                                     <connections>
                                                         <action selector="decreaseCurrentValueTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="8a0-xj-Ylf"/>
                                                     </connections>
@@ -161,7 +167,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idm-pf-MvS">
                                                     <rect key="frame" x="560" y="14" width="32" height="32"/>
                                                     <animations/>
-                                                    <state key="normal" image="plus-sign-32-3pxstroke"/>
+                                                    <state key="normal" image="Plus-TallyListView"/>
+                                                    <state key="selected" image="Plus-TallyListViewAlt"/>
+                                                    <state key="highlighted" image="Plus-TallyListViewAlt"/>
                                                     <connections>
                                                         <action selector="increaseCurrentValueTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="rsx-IO-pPa"/>
                                                     </connections>
@@ -201,7 +209,8 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efE-Jm-OUo">
                                                     <rect key="frame" x="8" y="14" width="32" height="32"/>
                                                     <animations/>
-                                                    <state key="normal" image="minus-sign-32-3pxstroke"/>
+                                                    <state key="normal" image="Minus-TallyListView"/>
+                                                    <state key="highlighted" image="Minus-TallyListViewAlt"/>
                                                     <connections>
                                                         <action selector="increaseValueDownTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="bk6-GB-4qj"/>
                                                     </connections>
@@ -209,7 +218,8 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bk-n2-9AO">
                                                     <rect key="frame" x="560" y="14" width="32" height="32"/>
                                                     <animations/>
-                                                    <state key="normal" image="plus-sign-32-3pxstroke"/>
+                                                    <state key="normal" image="Plus-TallyListView"/>
+                                                    <state key="highlighted" image="Plus-TallyListViewAlt"/>
                                                     <connections>
                                                         <action selector="increaseValueUpTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="gyu-hY-XkP"/>
                                                     </connections>
@@ -249,7 +259,8 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le0-0E-pta">
                                                     <rect key="frame" x="8" y="14" width="32" height="32"/>
                                                     <animations/>
-                                                    <state key="normal" image="minus-sign-32-3pxstroke"/>
+                                                    <state key="normal" image="Minus-TallyListView"/>
+                                                    <state key="highlighted" image="Minus-TallyListViewAlt"/>
                                                     <connections>
                                                         <action selector="decreaseValueDownTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="haW-ij-u5g"/>
                                                     </connections>
@@ -263,7 +274,8 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4b-Ej-h6x">
                                                     <rect key="frame" x="560" y="13" width="32" height="32"/>
                                                     <animations/>
-                                                    <state key="normal" image="plus-sign-32-3pxstroke"/>
+                                                    <state key="normal" image="Plus-TallyListView"/>
+                                                    <state key="highlighted" image="Plus-TallyListViewAlt"/>
                                                     <connections>
                                                         <action selector="decreaseValueUpTapped:" destination="PT1-8b-z7i" eventType="touchUpInside" id="vEt-Ex-H6T"/>
                                                     </connections>
@@ -435,6 +447,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="edit" id="h5A-qs-Gi6"/>
+                    </toolbarItems>
                     <connections>
                         <outlet property="labelLabel" destination="aeE-rh-v3l" id="7nw-pl-gJM"/>
                     </connections>
@@ -491,7 +506,5 @@
         <image name="Plus-TallyCounterViewAlt" width="64" height="64"/>
         <image name="Plus-TallyListView" width="32" height="32"/>
         <image name="Plus-TallyListViewAlt" width="32" height="32"/>
-        <image name="minus-sign-32-3pxstroke" width="32" height="32"/>
-        <image name="plus-sign-32-3pxstroke" width="32" height="32"/>
     </resources>
 </document>
